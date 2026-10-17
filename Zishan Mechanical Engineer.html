@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zishan Mechanical Engineer</title>
+<meta name="description" content="Engineer-led repair for bikes, electric bikes and cars. Call +92 321 5599451.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050505;--gold:#d4af37;--gold2:#f3d98b;--text:rgba(255,255,255,.72);--head:rgba(255,255,255,.92);--glass:rgba(255,255,255,.05);--line:rgba(212,175,55,.3);--disp:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:radial-gradient(900px 500px at 85% -5%,rgba(212,175,55,.16),transparent 60%),radial-gradient(700px 500px at 0% 60%,rgba(255,255,255,.05),transparent 60%),#050505;color:var(--text);font:400 16px/1.65 Manrope,system-ui,-apple-system,'Segoe UI',sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(5,5,5,.7);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);z-index:20}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:21;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 20px;background:rgba(5,5,5,.7);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{font:800 1.6rem/1 var(--disp);color:var(--gold2);text-decoration:none;letter-spacing:.02em}
+nav{display:flex;align-items:center;gap:22px}
+nav a{text-decoration:none}
+nav a:hover{color:var(--gold2)}
+nav .links{display:contents}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;border:1px solid var(--gold);color:var(--gold2);background:rgba(212,175,55,.08);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);text-decoration:none;font-weight:600}
+.btn.solid{background:linear-gradient(135deg,rgba(243,217,139,.92),rgba(212,175,55,.92));color:#111}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:24px;max-width:1100px;margin:0 auto;padding:48px 20px 32px;min-height:78vh}
+h1{font:800 clamp(2.5rem,7vw,4.8rem)/1 var(--disp);margin:0 0 18px;color:rgba(255,255,255,.06);-webkit-text-stroke:1.5px var(--gold);text-shadow:0 0 40px rgba(212,175,55,.28)}
+.lead{font-size:1.1rem;max-width:34em;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.scene{perspective:900px;display:grid;place-items:center;height:340px}
+.rig{width:260px;height:260px;position:relative;transform-style:preserve-3d;animation:swing 9s ease-in-out infinite alternate}
+.rig>*{position:absolute;inset:0;border-radius:50%}
+.tire{border:20px solid rgba(255,255,255,.1);box-shadow:0 0 30px rgba(212,175,55,.2),inset 0 0 20px rgba(212,175,55,.15)}
+.t1{transform:translateZ(-28px)}
+.t3{transform:translateZ(28px);border-color:rgba(212,175,55,.38)}
+.rim{inset:30px;border:2px solid var(--gold);transform:translateZ(14px)}
+.spokes{inset:34px;animation:spin 14s linear infinite}
+.spokes i{position:absolute;left:50%;top:0;width:2px;height:100%;margin-left:-1px;background:linear-gradient(transparent,rgba(212,175,55,.85),transparent)}
+.hub{inset:45%;background:radial-gradient(var(--gold2),var(--gold));transform:translateZ(20px);box-shadow:0 0 26px var(--gold)}
+@keyframes swing{from{transform:rotateX(-14deg) rotateY(-38deg)}to{transform:rotateX(10deg) rotateY(38deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+section{max-width:1100px;margin:0 auto;padding:52px 20px}
+h2{font:800 clamp(2rem,5vw,3rem)/1.05 var(--disp);margin:0 0 12px;color:var(--head)}
+h3{font:700 1.55rem/1.1 var(--disp);color:var(--gold2);margin:0 0 8px}
+p{margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;perspective:1000px;margin-top:22px}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08)}
+.tilt{transition:transform .15s ease-out;transform-style:preserve-3d}
+.tilt h3{transform:translateZ(30px)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+.tabs button{font:inherit;color:var(--text);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:10px 18px;cursor:pointer}
+.tabs button[aria-selected=true],.tabs button[aria-pressed=true]{color:#111;background:linear-gradient(135deg,rgba(243,217,139,.95),rgba(212,175,55,.95));font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:.88rem;color:rgba(255,255,255,.82)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.about .glass p:last-child{margin:0}
+.phone{display:inline-block;font:800 clamp(2rem,7vw,3.2rem)/1.1 var(--disp);color:rgba(243,217,139,.92);text-decoration:none;margin:8px 0 18px;text-shadow:0 0 30px rgba(212,175,55,.3)}
+footer{text-align:center;padding:28px 20px 40px;border-top:1px solid var(--line);font-size:.9rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;min-height:0;padding-top:32px}.scene{height:300px}.rig{width:230px;height:230px}.about{grid-template-columns:1fr}nav .links{display:none}.brand{font-size:1.3rem}}
+@media(prefers-reduced-motion:reduce){.rig{animation:none;transform:rotateX(-10deg) rotateY(-24deg)}.spokes{animation:none}.tilt{transition:none}html{scroll-behavior:auto}}
+[hidden]{display:none!important}
+.ic{width:104px;color:var(--gold);margin-bottom:10px;filter:drop-shadow(0 0 10px rgba(212,175,55,.35))}
+.ic.sm{width:68px;margin-bottom:6px}
+.ic svg{width:100%;height:auto;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.ic circle{fill:#050505}
+.tilt .ic{transform:translateZ(40px)}
+#ftabs{margin:4px 0 0}
+#ftabs button{padding:7px 14px;font-size:.9rem}
+.chips small{margin-left:6px;font-size:.68rem;padding:1px 7px;border-radius:999px;border:1px solid rgba(255,255,255,.4);color:rgba(255,255,255,.75)}
+.chips small.Auto{border-color:var(--gold);color:var(--gold2)}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#top">Zishan Mechanical Engineer</a>
+  <nav>
+    <span class="links"><a href="#services">Services</a><a href="#models">Models</a><a href="#about">About</a></span>
+    <a class="btn" href="tel:+923215599451">Call now</a>
+  </nav>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <h1>Premium repair for bikes, electric bikes and cars</h1>
+      <p class="lead">Engineer-led workshop for petrol bikes, electric scooters and family cars. Honest diagnosis, careful repair and clear answers.</p>
+      <div class="cta">
+        <a class="btn solid" href="tel:+923215599451">Call +92 321 5599451</a>
+        <a class="btn" href="https://wa.me/923215599451">Message on WhatsApp</a>
+      </div>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <div class="rig"><div class="tire t1"></div><div class="tire t2"></div><div class="tire t3"></div><div class="rim"></div><div class="spokes" id="spokes"></div><div class="hub"></div></div>
+    </div>
+  </div>
+
+  <section id="services">
+    <h2>What we repair</h2>
+    <p>One workshop for every vehicle in your family.</p>
+    <div class="grid">
+      <div class="glass tilt" data-i="bike"><h3>Bikes</h3><p>All sizes from 70cc to heavy bikes. Engine tuning, oil change, clutch, chain set, brakes and wiring for Honda, Yamaha, Suzuki and every other company.</p></div>
+      <div class="glass tilt" data-i="scooter"><h3>Electric bikes and scooters</h3><p>Battery, motor, controller, charger and wiring checks for all electric scooters and EV bikes.</p></div>
+      <div class="glass tilt" data-i="car"><h3>Cars</h3><p>Full service, engine, suspension, brakes, AC and computer scanning for all car models, manual and automatic.</p></div>
+    </div>
+  </section>
+
+  <section id="models">
+    <h2>Models we repair</h2>
+    <p>Choose a bike size, electric bikes or cars to see companies and models. Your model is not listed? Call us. We work on all of them.</p>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="tabs" id="ftabs" hidden></div>
+    <div class="grid" id="panel" role="tabpanel"></div>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <div>
+        <h2>10 years of engineering experience</h2>
+        <p>Your vehicle is handled by an engineer with 10 years of hands-on experience on bikes, electric bikes and cars.</p>
+      </div>
+      <div class="glass tilt">
+        <p>We find the real fault before changing any part.</p>
+        <p>We explain the problem and the cost in simple words before work starts.</p>
+        <p>We test the vehicle after repair, so you leave with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="glass">
+      <h2>Book a repair</h2>
+      <p>Call or send a WhatsApp message. Tell us the vehicle model and the problem.</p>
+      <a class="phone" href="tel:+923215599451">+92 321 5599451</a>
+      <div class="cta"><a class="btn solid" href="tel:+923215599451">Call now</a><a class="btn" href="https://wa.me/923215599451">WhatsApp</a></div>
+    </div>
+  </section>
+</main>
+<footer>© Zishan Mechanical Engineer. Bikes, electric bikes and cars.</footer>
+<script>
+var D={
+"70cc":["bike",[["Honda",["CD 70","CD 70 Dream"]],["United",["US 70"]],["Road Prince",["Classic 70","70 Passion Plus"]],["Unique",["UD 70"]],["Super Power",["SP 70"]],["Metro",["MR 70"]],["Yamaha",["Dhoom YD 70"]],["Hi-Speed",["70cc models"]],["Ravi",["70cc models"]]]],
+"100cc and 110cc":["bike",[["Honda",["Pridor"]],["Yamaha",["Royale YB 100"]],["Suzuki",["GD 110","GD 110S"]],["United",["US 100","US 100 Jazba","US Scooty 100"]],["Road Prince",["110 Jack Pot"]],["Other brands",["All 100cc and 110cc models"]]]],
+"125cc":["bike",[["Honda",["CG 125","CG 125 Special Edition","CB 125F"]],["Yamaha",["YB 125Z","YB 125Z-DX","YBR 125","YBR 125G"]],["Suzuki",["GSX 125"]],["United",["US 125 Euro II","US 125 Deluxe"]],["Road Prince",["125"]],["Other brands",["Unique","Super Power","Metro","Hi-Speed"]]]],
+"150cc and 180cc":["bike",[["Honda",["CG 150","CB 150F","CB 150F Special Edition","CBR 150R"]],["Suzuki",["GS 150","GS 150 SE","GR 150"]],["Yamaha",["Byson FZ16"]],["Road Prince",["150 Wego"]],["Benelli",["TNT 150i","180S"]],["CF Moto",["150SC scooter"]]]],
+"200cc to 400cc":["bike",[["Hi-Speed",["Battlo 200","Freedom 200","Cyclone 250"]],["Road Prince",["RX3"]],["Benelli",["TNT 25 (251S)","302R","302S","Imperiale 400"]],["Suzuki",["Inazuma GW 250"]],["Kawasaki",["Ninja 250","Ninja 400"]],["Chinese 250cc and 400cc",["ZXMCO Monster 250","BMW S1000RR replica 400","Kawasaki Z1000 replica 400"]]]],
+"500cc and above":["bike",[["Benelli",["TRK 502X","TNT 600i"]],["Kawasaki",["KLR 650","Z1000"]],["Yamaha",["YZF-R6","YZF-R1"]],["Suzuki",["GSX-R600","GSX-R1000","Hayabusa"]],["Honda",["CBR 500R","CBR 1000RR Fireblade"]],["BMW",["S1000RR"]]]],
+"Electric bikes":["scooter",[["United",["Bullet Max","Bullet Pro","Electric 125"]],["Jolta",["JE-70D","JE-70L","JE-70L SE","JE-100G","JE-100L","JE-100L SE","Storm","Sparrow"]],["Yadea",["GT30","T5","G5","Ruibin","Epoc-H"]],["Metro",["E8S","E8S Pro","Miku Super","M-6"]],["MS Jaguar",["E-70","E-125"]],["Revoo",["A11","A12","E52"]],["Elfa",["EV 125"]],["Vlektra",["Velocity 180","Bolt"]],["Super Power",["E-Scooty"]],["Ecodost",["ED 70 Plus"]],["Other brands",["Alpha 1500","YJ Future","Chargers","Batteries"]]]],
+"Cars":["car",[
+["Suzuki",[["Alto","B"],["Cultus","B"],["Swift","B"],["Wagon R","B"],["Every","B"],["Jimny","B"],["Liana","B"],["Spacia","A"],["Hustler","A"],["Bolan","M"],["Mehran","M"],["Ravi","M"]]],
+["Toyota",[["Corolla","B"],["Yaris","B"],["Hilux","B"],["Hiace","B"],["Fortuner","A"],["Corolla Cross","A"],["Camry","A"],["Land Cruiser","A"],["Prado","A"],["RAV4","A"],["Prius","A"],["Aqua","A"],["Axio","A"],["Vitz","A"],["Passo","A"],["Belta","A"],["Platz","A"],["Raize","A"],["C-HR","A"],["Harrier","A"]]],
+["Honda",[["City","B"],["Civic","B"],["Accord","A"],["BR-V","A"],["HR-V","A"],["CR-V","A"],["Vezel","A"],["Fit","A"],["Freed","A"],["Grace","A"],["N-WGN","A"],["N-Box","A"]]],
+["Daihatsu",[["Mira","A"],["Move","A"],["Cast","A"],["Tanto","A"]]],
+["Nissan",[["Dayz","A"],["Note","A"],["Juke","A"]]],
+["KIA",[["Sportage","A"],["Picanto","B"],["Stonic","A"],["Sorento","A"]]],
+["Hyundai",[["Tucson","A"],["Elantra","A"],["Sonata","A"],["Santa Fe","A"],["Santro","B"],["Ioniq 5","A"],["Ioniq 6","A"]]],
+["Changan",[["Alsvin","B"],["Oshan X7","A"],["Karvaan","M"]]],
+["Haval",[["H6","A"],["H6 HEV","A"],["H6 PHEV","A"],["Jolion","A"],["Jolion HEV","A"]]],
+["MG",[["HS","A"],["HS Trophy","A"],["ZS EV","A"]]],
+["Proton",[["Saga","B"],["X70","A"]]],
+["Chery",[["Tiggo 4 Pro","A"],["Tiggo 7","A"],["Tiggo 8 Pro","A"]]],
+["Jetour",[["Dashing","A"],["X70 Plus","A"]]],
+["Jaecoo",[["J5","A"],["J6","A"],["J7","A"]]],
+["Omoda",[["E5","A"],["C7","A"]]],
+["BYD",[["Atto 3","A"],["Seal","A"]]],
+["Deepal",[["L07","A"],["S07","A"]]],
+["Honri",[["Ve","A"]]],
+["Isuzu",[["D-Max","B"]]]
+]]
+};
+var ICON={
+bike:'<svg viewBox="0 0 120 64"><circle cx="26" cy="44" r="13"/><circle cx="96" cy="44" r="13"/><path d="M26 44H48L58 26H82L96 44M58 26L50 18H64M82 26L88 14H98M48 44H66L70 34"/></svg>',
+scooter:'<svg viewBox="0 0 120 64"><circle cx="24" cy="48" r="10"/><circle cx="98" cy="48" r="10"/><path d="M24 48H42Q50 48 52 40V36H88L98 48M88 36L84 16H96M52 36L62 28H76M60 4L54 14H62L56 24"/></svg>',
+car:'<svg viewBox="0 0 120 64"><path d="M8 46V36L16 30L34 26L46 14H80L96 28L110 32L114 46Z"/><circle cx="32" cy="47" r="9"/><circle cx="92" cy="47" r="9"/><path d="M48 26H78M62 26V14"/></svg>'
+};
+var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function bind(el){
+  if(reduce)return;
+  el.addEventListener("pointermove",function(e){
+    if(e.pointerType!=="mouse")return;
+    var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    el.style.transform="rotateY("+(x*14)+"deg) rotateX("+(-y*14)+"deg)";
+  });
+  el.addEventListener("pointerleave",function(){el.style.transform=""});
+}
+var sp=document.getElementById("spokes");
+for(var i=0;i<8;i++){var s=document.createElement("i");s.style.transform="rotate("+(i*22.5)+"deg)";sp.appendChild(s)}
+var tabs=document.getElementById("tabs"),panel=document.getElementById("panel"),ft=document.getElementById("ftabs");
+var tf="All",cur="70cc";
+function ok(t){return tf==="All"||(tf==="Manual"&&t!=="A")||(tf==="Automatic"&&t!=="M")}
+function show(name){
+  cur=name;
+  Array.prototype.forEach.call(tabs.children,function(b){b.setAttribute("aria-selected",b.textContent===name)});
+  ft.hidden=name!=="Cars";
+  panel.innerHTML="";
+  var g=D[name];
+  g[1].forEach(function(b){
+    var ms=b[1].filter(function(m){return typeof m==="string"||ok(m[1])});
+    if(!ms.length)return;
+    var c=document.createElement("div");c.className="glass tilt";
+    c.innerHTML='<div class="ic sm">'+ICON[g[0]]+'</div>';
+    var h=document.createElement("h3");h.textContent=b[0];c.appendChild(h);
+    var w=document.createElement("div");w.className="chips";
+    ms.forEach(function(m){
+      var t=document.createElement("span");
+      if(typeof m==="string"){t.textContent=m}else{
+        t.textContent=m[0];
+        (m[1]==="B"?["Manual","Auto"]:[m[1]==="M"?"Manual":"Auto"]).forEach(function(x){var q=document.createElement("small");q.className=x;q.textContent=x;t.appendChild(q)});
+      }
+      w.appendChild(t);
+    });
+    c.appendChild(w);panel.appendChild(c);bind(c);
+  });
+}
+Object.keys(D).forEach(function(k){
+  var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=k;
+  b.addEventListener("click",function(){show(k)});tabs.appendChild(b);
+});
+["All","Manual","Automatic"].forEach(function(k){
+  var b=document.createElement("button");b.type="button";b.textContent=k;b.setAttribute("aria-pressed",k==="All");
+  b.addEventListener("click",function(){
+    tf=k;
+    Array.prototype.forEach.call(ft.children,function(x){x.setAttribute("aria-pressed",x.textContent===k)});
+    show(cur);
+  });
+  ft.appendChild(b);
+});
+document.querySelectorAll("[data-i]").forEach(function(el){
+  el.insertAdjacentHTML("afterbegin",'<div class="ic">'+ICON[el.getAttribute("data-i")]+'</div>');
+});
+document.querySelectorAll(".tilt").forEach(bind);
+show("70cc");
+</script>
+</body>
+</html>
